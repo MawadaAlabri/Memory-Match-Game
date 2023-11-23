@@ -126,9 +126,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (matchedCards.length === numberOfMatches * 2) {
       setTimeout(() => {
-        // alert("Congratulations! You matched all the cards.");
+        playClapSound();
         initFireworks();
       }, 0);
+    }
+    function playClapSound() {
+      const clapSound = new Audio('clap.wav'); 
+    
+      clapSound.play();
+
+      setTimeout(() => {
+        clapSound.pause();
+      }, 5000);
     }
   }
 
