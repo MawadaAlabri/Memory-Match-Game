@@ -143,11 +143,11 @@ function initFireworks() {
   function animate() {
     let current = [];
 
-    // let gradient = context.createLinearGradient(0, 0, 0, height);
-    // gradient.addColorStop(0, "rgba(0, 0, 1, 0.1)");
-    // gradient.addColorStop(1, "rgba(0, 43, 71, 0.1)");
+    const gradient = context.createLinearGradient(0, 0, width, height);
+    gradient.addColorStop(0, 'rgb(241, 100, 57)');
+    gradient.addColorStop(1, 'rgb(247, 230, 199)');
 
-    context.fillStyle = "#f9f9f9";
+    context.fillStyle = gradient;
 
     context.fillRect(0, 0, width, height);
     if (clicked) {
