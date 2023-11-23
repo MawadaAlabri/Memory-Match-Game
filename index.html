@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Memory Match Game</title>
+  </head>
+  <body>
+    <div id="section1" class="section">
+      <div class="input-container">
+        <label for="playerName">Enter your name:</label>
+        <input type="text" id="playerName" required />
+      </div>
+      <div class="input-container">
+        <label for="difficulty">Choose difficulty:</label>
+        <select id="difficulty" name="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="input-container">
+        <label for="theme">Choose theme:</label>
+        <select id="theme" name="theme">
+          <option value="animal">Animal</option>
+          <option value="flower">Flower</option>
+          <option value="fruit">Fruit</option>
+        </select>
+      </div>
+      <button id="startButton" class="start-button">Start</button>
+    </div>
+
+    <div id="section2" class="section">
+      <div id="welcomeMessage" class="welcome-message"></div>
+      <button id="hintButton" class="hint-button">Hint</button>
+      <div id="game-container" class="game-container">
+        <!-- Cards will be dynamically added here using JavaScript -->
+      </div>
+      <canvas id="canvas"></canvas>
+      <button id="restart-button" class="restart-button">Restart Game</button>
+      <button id="backButton" class="back-button">Back</button>
+    </div>
+    <script src="fireworks.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
